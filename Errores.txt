@@ -1,0 +1,4 @@
+6 errores críticos de seguridad
+Errores de jwt
+Algunos de ruta
+

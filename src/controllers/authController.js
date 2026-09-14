@@ -7,7 +7,7 @@ async function register(req, res, next) {
     const { name, email, password } = req.body;
 
     if (!name || !email || !password) {
-      res.status(400).json({ message: "Faltan datos" });
+      res.status(400).json({ message: "Faltan datos" }); // falta un return, sino la función seguiría
     }
 
     const exists = users.find((u) => u.email === email);
