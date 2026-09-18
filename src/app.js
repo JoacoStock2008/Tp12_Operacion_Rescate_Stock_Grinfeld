@@ -11,9 +11,9 @@ const app = express();
 
 app.use(morgan("dev"));
 
-app.use("/api/loginn", authRoutes); //1er error, debería ser /api/login en vez de /api/login
+app.use("/api/login", authRoutes); //1er error, debería ser /api/login en vez de /api/login
 app.use("/api/users", userRoutes);
-app.use("/api/users", adminRoutes);
+app.use("/api/admin", adminRoutes); //dos rutas con el mismo nombre para algo distinto, en vez de /api/users podría ser /api/admin
 
 app.get("/", (req, res) => {
   res.status(200).json({
